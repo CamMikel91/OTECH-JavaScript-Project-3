@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchfinder</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // jquery styles
+            $('header').css('text-align','center');
+            $('#logo').css({'background-color':'#F06060','color':'#FFF','font-size':'600%'});
+            $('.imageSize').css('width','32%');
+            $('#images').css('width','80%');
+            $('form').css('padding','10px');
+            $('form img').css({'width': '100%','margin-bottom':'25px'});
+            $(':input[type=password]').css('background-color','#10A296');
+            $(':input[value^=Find]').css({'color':'#10A296','background-color':'#FFF','padding':'5px'});
+            $('input[value$=Name]').css('color','#F06060');            
+            $('p:contains(Matchfinder)').css('font-style','italic');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="logo">Matchfinder</h1>
+    </header>
+    <main>
+        <p>Matchfinder is the world's best website to match you with the best potential people. Do you want a full time relationship? Do you want to take it casual? No matter your preference, Matchfinder can help create the best solution for you. Your perfect match is just a click away!</p>
+        
+        <form action="#" method="post">
+            <h1>Sign Up Today</h1>
+            <img src="images/InLoveSelfie.jpg" alt="In a Field">
+            <label for="display_name">Display Name:</label>
+            <input type="text" id="display_name" value="Display Name"><br>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" value="First Name"><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" value="Last Name"><br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" value="example@email.com"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password"><br>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password"><br>
+            <input type="submit" id="submit" value="Find Love">
+        </form>
+
+        <div id="images">
+            <img src="images/AmberAndSienna.jpg" alt="Amber and Sienna" class="imageSize">
+            <img src="images/TreeFlowers.jpg" alt="Trees and Flowers" class="imageSize">
+            <img src="images/InAField.jpg" alt="In a Field" class="imageSize">
+            <img src="images/I_Said_Yes.jpg" alt="I Said Yes" class="imageSize">
+            <img src="images/JoshAndKade.jpg" alt="Josh and Kade" class="imageSize">
+            <img src="images/WeddingPicture.jpg" alt="Wedding Picture" class="imageSize">
+            <img src="images/FoundEachOther.jpg" alt="Found Each Other" class="imageSize">
+            <img src="images/OnABike.jpg" alt="On a Bike" class="imageSize">
+            <img src="images/RedBalloons.jpg" alt="Red Balloons" class="imageSize">
+        </div>
+
+        
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022 Matchfinder Inc. All rights reserved. <span id="phoneNumber">1-800-MY-MATCH</span></p>
+    </footer>
+    <script>
+        
+    </script>
+</body>
+</html>

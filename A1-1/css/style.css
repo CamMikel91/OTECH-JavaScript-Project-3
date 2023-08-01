@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Grape Nuts';
+    src: url(../fonts/GrapeNuts-Regular.ttf);
+}
+
+body {
+    background-color: #F7F2CB;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+header h1 {
+    font-family: 'Grape Nuts';
+}
+
+#logo {
+    margin-top: 0;
+}
+
+main {
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+main p {
+    margin-right: 25%;
+    margin-top: 0;
+}
+
+input {
+    float: right;
+}
+
+form {
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #72CCA7;
+    width: 20%;
+    font-size: large;
+}
+
+footer {
+    text-align: center;
+    background-color: #F06060;
+    color: #FFF;
+    font-size: small;
+    padding: 6px 0;
+}
+
+input {
+    border: none;
+}
+
+input[type="email"] {
+    color:  #F06060;
+}
+
+#phoneNumber {
+    float: right;
+    padding-right: 30px;
+}
