@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMDb - Dreamworks</title>
     <link rel="stylesheet" href="A2-1.css">
-
+    <script src="jquery.js"></script>
 </head>
 <body>
     <header>
@@ -25,8 +25,73 @@
         </ol>
     </main>
     <script>
+        
+        $(document).ready(function(){
 
+            // array of objects for movieList containing movie properties
+            let movieList = [
+            {name: 'Shrek', id: 'shrek1', imgSrc: 'Shrek.jpg'},
+            {name: 'How to Train Your Dragon 2', id: 'dragon2', imgSrc: 'Dragon_2.jpg'},
+            {name: 'Kung Fu Panda', id: 'kungFu', imgSrc: 'KungFuPanda.jpg'},
+            {name: 'How to Train Your Dragon', id: 'dragon1', imgSrc: 'Dragon.jpg'},
+            {name: 'Shrek 2', id: 'shrek2', imgSrc: 'Shrek_2.jpg'}
+            ];
+
+            // addMovies Button
+            $('#addMovies').click(function() {
+                $(movieList).each(function() {
+                    let movieListString = '<li  id = ' + this.id + '>' + this.name + '</li>';
+                    $('#movieList').append(movieListString);
+                });
+            });
+
+            //addImages Button             
+            $('#addImages').click(function() {
+                $('#movieList li').each(function() {
+                    for (let i = 0; i < movieList.length; i++) {                        
+                        if (this.id == movieList[i].id) {
+                            let currentImg = new Image();
+                            currentImg.src = 'images/' + movieList[i].imgSrc;
+                            $(this).prepend(currentImg);
+                        } 
+                    }                    
+                });
+            });
+
+            //addStyle Button
+            $('#addStyle').click(function() {
+                $('#movieList').wrap('<div class = "movieStyle"></div>');
+            });
+
+            //posterSize
+            $('#posterSize').click(function() {
+                $('main img').attr({width: '150px', border: '3px solid'});
+            });           
+            
+            //roundCorners
+            $('#roundCorners').click(function() {
+                $('main img').toggleClass('roundCorners');
+            });
+
+            //removeButtons
+            $('#removeButtons').click(function(){
+                if ($('button').hasClass('show')) {
+                    $('button').removeClass('show');
+                    $('button').addClass('hide');
+                    $('#removeButtons').val('Add Buttons');
+                }
+                else {
+                    $('button').removeClass('hide');
+                    $('button').addClass('show');
+                    $('#removeButtons').val('Remove Buttons');
+                }
+            });
+
+            
+            
+        });               
         
     </script>
+
 </body>
 </html>
