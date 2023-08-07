@@ -1,0 +1,61 @@
+body {
+    background-color: #DBFAC0;
+}
+#container {
+    background-color: #C3F399;
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+input {
+    margin: 5px;
+    padding: 5px;
+}
+form {
+    display: table;
+    width: 100%;
+    border-radius: 25px;
+}
+.tableRow {
+    display: table-row;
+}
+.tableRow label, .tableRow input {
+    display: table-cell;
+}
+.tableRow label {
+    text-align: right;
+    padding-right: 50px;
+    width: 35%;
+}
+.tableRow input {
+    width: 245px;
+}
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+}
+#circle1 {
+    background-color: #FFCEBD;
+}
+#circle2 {
+    background-color: #FABFFF;
+}
+#circle3 {
+    background-color: #BFC9FF;
+}
+#circle4 {
+    background-color: #C7FFF4;
+}
+
+.pink {
+    background-color: #FABFFF;
+}
+p {
+    text-align: center;
+}
+#bunny {
+    width: 250px;
+}
