@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A3-1</title>
     <link rel="stylesheet" href="A3-1.css">
-
+    <script src="jquery.js"></script>
 </head>
 <body>
     <div id="container">
@@ -39,7 +39,59 @@
     </div>
 
     <script>
-       
+       $(document).ready(function() {
+        // task 1
+        $('.circle').on('mouseover', function() {
+            $(this).css('cursor', 'pointer');
+        })
+        // task 2
+        $('div #circle1').on('click', function() {
+            alert('Circle1 has been clicked!');
+        })
+        // task 3
+        $('div #circle2').on('click', function() {
+            $('input').toggleClass('pink');
+        })
+        // task 4
+        $('div #circle3').on('dblclick', function() {
+            $('div #buttonClicks').append('<h2>Button 3 was clicked!</h2>');
+        })
+        // task 5
+        $('#circle4').on('mouseenter', function() {
+            $(this).css({
+                border: '2px solid pink',
+                width: '40px',
+                height: '40px'
+            });
+        }).on('mouseleave', function(){
+            $(this).css({
+                border: 'none',
+                width: '35px',
+                height: '35px'
+            });
+        });
+        // task 6
+        $('#circle4').on('click', function() {
+            $('#buttonClicks').toggle();
+        })
+        // task 7
+        $('#bunny').on('mouseenter', function() {
+            $(this).attr('src', 'mouse.png');
+        }).on('mouseleave', function() {
+            $(this).attr('src', 'bunny.png');
+        })
+        // task 8
+        $('#disableBunny').on('click', function() {
+            $('#bunny').off('mouseenter mouseleave');
+        })
+        // task 9
+        $('#num1, #num2').on('change', function() {
+            let num1 = $('#num1').val(),
+                num2 = $('#num2').val();
+            $('#total').val(+num1 + +num2);
+        })
+
+    });
     </script>
 </body>
 </html>
