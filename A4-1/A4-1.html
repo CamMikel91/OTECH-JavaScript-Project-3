@@ -7,8 +7,67 @@
     <title>A4-1</title>
     <link rel="stylesheet" href="style.css">
 
+    <script src="jquery.js"></script>
     <script>
-        $(function() {
+        $(document).ready(function(){
+
+            // task 1
+            let frozen = $('#frozen');
+            frozen.hover(
+                function(){
+                    frozen.fadeOut();
+                    frozen.fadeIn();
+                }
+            );
+
+            // task 2
+            $('#types, #popular, #contact').hover(
+                function(){
+                    $(this).animate({fontSize: '80%'});
+                },
+                function(){
+                    $(this).animate({fontSize: '100%'});
+                }
+            );
+
+            // task 3
+            let fruityImg = $('#fruity');
+                fruityCaption = $('#fruityCaption');
+                
+            fruityImg.on('click', function(){
+                fruityImg.slideUp('fast', function(){
+                    $('#fruityCaption').text('All Gone!');
+                });                
+            });
+
+            fruityCaption.on('mouseover', function () {
+                if(fruityCaption.text() == 'All Gone!'){
+                    fruityCaption.css('cursor', 'pointer');
+                }                
+            }).on('click', function(){
+                if(fruityCaption.text() == 'All Gone!'){
+                    fruityImg.slideDown('fast', function(){
+                        fruityCaption.text('Fruity Flavors');
+                        fruityCaption.css('cursor', 'default');
+                    });
+                }
+            });
+
+            // task 4
+            let iceCream = $('#icecream'),
+                definition = $('#definition');
+
+            iceCream.on('click', function(){
+                definition.slideToggle('fast');
+            })
+
+            // task 5
+            let compBtn = $('#compositionButton'),
+                compDescription = $('#compositionDescription');
+
+            compBtn.on('click', function(){
+                compDescription.load('IceCreamInfo.html #composition');
+            });
             
         });
     </script>
