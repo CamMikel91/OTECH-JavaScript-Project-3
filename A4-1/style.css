@@ -1,0 +1,89 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    background-color: yellow;
+    height: 150px;
+    border-bottom: 2px solid #E50070;
+}
+@font-face {
+    font-family: 'Rock Salt';
+    src: url('fonts/RockSalt-Regular.ttf');
+}
+header img {
+    width: 175px;
+    padding: 13px 0 0 13px;
+}
+#logo {
+    position: relative;
+}
+#logoText {
+    font-family: 'Rock Salt', cursive;
+    font-size: 150%;
+    padding-bottom: 20px;
+    position: relative;
+    top: -10px;
+}
+nav {
+    float: right;
+    margin-right: 5%;
+}
+nav ul {
+    width: 500px;
+    margin-top: 92px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #E50070;
+    padding-left: 0;
+}
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+    border-right: 2px solid yellow;
+    border-bottom: 4px solid #9E004E;
+    flex: 1 1 0;
+    text-align: center;
+}
+nav ul li:first-child {
+    border-left: 2px solid yellow;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+}
+main {
+    width: 80%;
+    margin: auto;
+}
+main figure {
+    display: inline-block;
+    width: 32.5%;
+    margin: 0;
+    text-align: center;
+    font-family: "Rock Salt", cursive;
+}
+main figure img {
+    width: 100%;
+}
+#icecream {
+    background-color: #E50070;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#definition {
+    display: none;
+}
+footer {
+    background-color: yellow;
+    text-align: center;
+    height: 50px;
+}
+footer p {
+    padding-top: 20px;
+    font-style: italic;
+    color: #E50070;
+    font-size: 75%;
+}
