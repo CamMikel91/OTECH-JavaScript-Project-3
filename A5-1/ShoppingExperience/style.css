@@ -1,0 +1,256 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header img {
+    width: 300px;
+    float: left;
+}
+
+nav {
+    padding-top: 61px;
+}
+
+#links {
+    background-color: #037DBE;
+    padding: 5px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+nav a:hover {
+    color: #111111;
+}
+
+main {
+    width: 90%;
+    margin: 10px auto;
+}
+
+#mainContentContainer {
+    margin-right: 22%;
+}
+
+#mainContentImage {
+    width: 100%;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    border: 1px dotted #4D4D4D;
+    background-color: #EEEEEE;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#sideBarHeading {
+    text-align: center;
+    padding: 5px 0;
+}
+
+#sideBarContainer {
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 2%;
+    border-radius: 5px;
+    width: 90%;
+    display: table;
+}
+
+.featuredImage {
+    max-width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #EEEEEE;
+    padding: 10px 0;
+    font-size: 80%;
+    height: 50px;
+    color: #4D4D4D;
+    clear: both;
+}
+
+#socialMediaLinks {
+    float: left;
+    padding-left: 5%;
+}
+
+#socialMediaLinks img {
+    width: 40px;
+    padding: 6px 0 0 6px;
+}
+
+#footerNav a {
+    text-decoration: none;
+    padding-right: 5%;
+    float: right;
+    font-size: 120%;
+    color: #037DBE;
+    padding-top: 17px;
+}
+
+#footerNav a:hover {
+    color: #000000;
+}
+
+#copyright {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 35px;
+    font-style: italic;
+}
+
+.tableRow {
+    display: table-row;
+}
+
+.tableCell {
+    display: table-cell;
+    padding: 10px 0;
+}
+
+.tableCell:first-child {
+    font-weight: bold;
+}
+
+#cartButtons {
+    text-align: right;
+    padding: 15px 3% 0 0;
+}
+
+#cartButtons button {
+    background-color: #037DBE;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    padding: 2%;
+    cursor: pointer;
+}
+
+#cartButtons #clearCartButton {
+    background-color: #EEEEEE;
+    border: 1px solid #037DBE;
+    color: #037DBE;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #BBBBBB;
+}
+
+.removeLink {
+    text-align: right;
+    font-size: 80%;
+    color: #037DBE;
+}
+
+#cardContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 25%;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 20px;
+    width: 100%;
+    height: 50%;
+}
+
+.cardText {
+    padding: 2px 16px;
+}
+
+.cardText button {
+    float: right;
+    background-color: #037DBE;
+    color: #FFFFFF;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cartCard {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.cartCard:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cartCardFlex {
+    display: flex;
+}
+
+.cartCard img {
+    width: 10%;
+    flex: 10%;
+}
+
+.cartTitle {
+    flex: 20%;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.cartDescription {
+    flex: 50%;
+    padding-left: 10px;
+}
+
+.cartQuantity {
+    flex: 10%;
+}
+
+.cartQuantity input {
+    margin-top: 17px;
+    width: 50px;
+}
+
+.cartPrice {
+    flex: 10%;
+    padding-left: 10px;
+}
+
+.removeMargins {
+    margin: 0;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+#emptyCart {
+    font-style: italic;
+    margin: 0;
+}
