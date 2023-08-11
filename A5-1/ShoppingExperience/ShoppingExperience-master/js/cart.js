@@ -13,7 +13,7 @@ function displayCartProducts() {
                         <p class="cartTitle">${cartItem.name}</p>
                         <p class="cartDescription">${cartItem.description}</p>
                         <div class="cartQuantity">
-                            <input type="number" value="${cartItem.quantity}" min="1" max="5">
+                            <input id="${cartItem.id}" class="quantityNumberInput" type="number" value="${cartItem.quantity}" min="1" max="5">
                         </div>
                         <p class="cartPrice">&dollar; ${cartItem.price}</p>
                     </div>
@@ -38,30 +38,31 @@ let subtotal,
     taxRate = 0.061,
     total;
 
-    // Order Summary Calculations
-    function calculateOrderSummary() {
-        subtotal = 0,
-        shipping = 0,
-        tax = 0,
-        total = 0;
+// Order Summary Calculations
+function calculateOrderSummary() {
+    subtotal = 0,
+    shipping = 0,
+    tax = 0,
+    total = 0;
 
-        clearStorageAndCart();
+    clearStorageAndCart();
 
-        // Subtotal and Shipping Calculations
-        cart.forEach(cartItem => {
-            subtotal += cartItem.price;
-            shipping += 1;
-        })
+    // Subtotal and Shipping Calculations
+    cart.forEach(cartItem => {
+        subtotal += cartItem.price * cartItem.quantity;
+        shipping += 1 * cartItem.quantity;
+    })
         
-        // Tax Calculation
-        tax = (subtotal + shipping) * taxRate;
+    // Tax Calculation
+    tax = (subtotal + shipping) * taxRate;
 
-        // Total Calculation
-        total = subtotal + shipping + tax;
-    }
+    // Total Calculation
+    total = subtotal + shipping + tax;
+}
 
 // Function to display Order Summary
 function displayOrderSummary() {
+    updateQuantity();
     calculateOrderSummary();
     sideBarContainer.innerHTML = `
     <div class="tableRow">
