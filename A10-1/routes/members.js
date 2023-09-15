@@ -18,6 +18,16 @@ router.post('/', async (req, res) => {
             email: req.body.email,
             password: await hashPassword(req.body.password)
         };
+
+        // Check if the email is already in use
+        for (let i = 0; i < currentMembers.length; i++) {
+            const member = currentMembers[i];
+            if (member.email === newMember.email) {
+                res.status(400).sendFile(__dirname + '/static/registrationFailure.html');
+                return;
+            }
+        }
+
         currentMembers.push(newMember);
         fs.writeFileSync('memberList.json', JSON.stringify(currentMembers));
         res.status(200).sendFile(__dirname + '/static/registrationSuccess.html');
