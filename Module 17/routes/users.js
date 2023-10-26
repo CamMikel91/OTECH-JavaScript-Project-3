@@ -19,9 +19,9 @@ router.post('/register', async (req, res) => {
 
     // Create User
     user = new User({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
+        firstName: req.body.firstName.toLowerCase(),
+        lastName: req.body.lastName.toLowerCase(),
+        email: req.body.email.toLowerCase(),
         password: req.body.password,
         isAdmin: req.body.isAdmin
     });
@@ -48,11 +48,11 @@ router.post('/register', async (req, res) => {
 // Login User
 router.post('/login', async (req, res) => {
   	// Validate User
-  	const { error } = validateLogin(req.body);
+  	const {error} = validateLogin(req.body);
   	if (error) return res.status(400).send(error.details[0].message);
 
   	// Check if User exists
-  	let user = await User.findOne({ email: req.body.email });
+  	let user = await User.findOne({email: req.body.email.toLowerCase()});
   	if (!user) return res.status(400).send('Invalid Email or Password.');
 
   	// Check Password
@@ -87,9 +87,9 @@ router.put('/:id', adminAuth, async (req, res) => {
 	
   	// Update User
   	user = await User.findByIdAndUpdate(req.params.id, {
-  	  	firstName: req.body.firstName,
-  	  	lastName: req.body.lastName,
-  	  	email: req.body.email,
+  	  	firstName: req.body.firstName.toLowerCase(),
+  	  	lastName: req.body.lastName.toLowerCase(),
+  	  	email: req.body.email.toLowerCase(),
   	  	isAdmin: req.body.isAdmin
   	}, { new: true });
 
