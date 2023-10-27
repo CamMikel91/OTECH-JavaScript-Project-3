@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const users = require('./routes/users.js');
+const coupons = require('./routes/coupons.js');
 
 app.use('/api/users', users);
+app.use('/api/coupons', coupons);
 
 // Check for Evironment
 if (!process.env.NODE_ENV) {
