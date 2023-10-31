@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+    head
+        title BC Small Engine Repair - Register
+        link(rel='stylesheet', href='../../css/register.css')
+    body
+        h1 Register
+        form(action="/api/users/register", method="POST")
+            div 
+                label(for="firstName") First Name:
+                input(type="text", name="firstName")
+            div
+                label(for="lastName") Last Name:
+                input(type="text", name="lastName")
+            div
+                label(for="email") Email:
+                input(type="email", name="email")
+            div
+                label(for="password") Password:
+                input(type="password", name="password")
+            button(type="submit") Register
+            p Already have an account?
+            a(href="/api/users/login") Login                

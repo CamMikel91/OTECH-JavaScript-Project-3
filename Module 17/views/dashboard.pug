@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title BC Small Engine Repair - User Dashboard
+    link(rel='stylesheet', href='../css/dashboard.css')
+  body
+    h1 #{user.firstName}'s Dashboard
+    div#couponList
+      h2 Current Coupons Available
+      if coupons.length == 0
+        p No coupons available at this time.
+      else
+        each coupon in coupons
+          div 
+            ul
+              li Coupon Code: #{coupon.code}
+              li Discount: #{coupon.discount}
+              li Details: #{coupon.details}

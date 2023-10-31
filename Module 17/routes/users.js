@@ -7,7 +7,12 @@ const auth = require('../middleware/auth');
 
 router.use(express.json());
 
-// Register User
+// Get Registration Page
+router.get('/register', (req, res) => {
+	res.render('register');
+});
+
+// Register New User
 router.post('/register', async (req, res) => {
     // Validate User
     const { error } = validateUser(req.body);
@@ -37,15 +42,14 @@ router.post('/register', async (req, res) => {
     const token = user.generateAuthToken();
 
     // Send Response
-    res.header('x-auth-token', token).send({
-        _id: user._id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email
-    });
+    res.redirect('/api/users/login');
 });
 
 // Login User
+router.get('/login', (req, res) => {
+	res.render('login');
+});
+
 router.post('/login', async (req, res) => {
   	// Validate User
   	const {error} = validateLogin(req.body);
@@ -62,8 +66,8 @@ router.post('/login', async (req, res) => {
   	// Generate Auth Token
   	const token = user.generateAuthToken();
 
-  	// Send Response
-  	res.send(token);
+	res.cookie('token', token);
+	res.redirect('/api/dashboard');
 });
 
 // Get All Users
